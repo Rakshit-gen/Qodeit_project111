@@ -1,11 +1,10 @@
 import React from "react";
 import Select from "react-select";
-
+import "react-datepicker/dist/react-datepicker.css";
 import { useState, useRef } from "react";
 import "./App.css";
 import DatePicker from "react-datepicker";
 
-import "react-datepicker/dist/react-datepicker.css";
 
 function Calculator() {
   const [startDate, setStartDate] = useState(new Date());
@@ -13,29 +12,29 @@ function Calculator() {
   const topTier = [
     {
       title: "Academic",
-      hs: 12,
-      ug: 15,
-      b: 21,
-      p: 25,
+      hg: 12,
+      und: 15,
+      bc: 21,
+      prf: 25,
     },
     {
       title: "Editing",
-      hs: 3,
-      ug: 5,
-      b: 7,
-      p: 13,
+      hg: 3,
+      und: 5,
+      bc: 7,
+      prf: 13,
     },
     {
       title: "Calculations",
-      hs: 18,
-      ug: 23,
-      b: 32,
-      p: 38,
+      hg: 18,
+      und: 23,
+      bc: 32,
+      prf: 38,
     },
   ];
   //topindex =0 midindex=1 toptier[topindex][midTier[midindex]]
 
-  const midTier = ["hs", "ug", "b", "p"];
+  const midTier = ["hg", "und", "bc", "prf"];
   const midtierDiv = useRef();
   const toptierDiv = useRef();
   const [tin, utin] = useState(0);
